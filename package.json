@@ -1,0 +1,18 @@
+{
+  "name": "qabootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "testcafe chrome ./pom/tests"
+  },
+  "author": "Ilse Macías",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "testcafe": "^1.17.1"
+  }
+}
