@@ -13,5 +13,9 @@ export const CREDENTIALS = {
 }
 
 export const TASKS = {
-    ADD_TASK: process.env.ADD_TASK
+    ADD_TASK: process.env.ADD_TASK,
+
+    TOMORROW:{
+        ADD_TASK_TOMORROW: "HELLO TOM"
+    }
 }
