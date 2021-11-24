@@ -1,4 +1,3 @@
-import { Selector, t, test} from 'testcafe'
 import {URL, CREDENTIALS, TASKS} from '../data/constants'
 import loginPage from '../pages/login-page'
 import taskPage from '../pages/task-page'
@@ -14,10 +13,12 @@ fixture('Task feature test')
             .submitLoginForm(CREDENTIALS.STANDARDS_USER.EMAIL, CREDENTIALS.STANDARDS_USER.PASSWORD)
 
         await taskPage
-            .addNewTaskForToday(TASKS.ADD_TASK)
+            .addNewTaskForToday(TASKS.TODAY.ADD_TASK_TODAY)
     })
 
-    test.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
+
+    //TO-DO: WORKING ON IT, WHEN WHEN USER NEEDS TO CLICK ON SCHEDULE.
+    test.only.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
         await t 
             .maximizeWindow()
 
@@ -25,5 +26,6 @@ fixture('Task feature test')
             .submitLoginForm(CREDENTIALS.STANDARDS_USER.EMAIL, CREDENTIALS.STANDARDS_USER.PASSWORD)
         
         await taskPage
-            .addNewTaskForTomorrow(TASKS.TOMORROW.ADD_TASK_TOMORROW)
+        .addNewTaskForTomorrowSecondOption(TASKS.TODAY.ADD_TASK_TODAY)
+            //.addNewTaskForTomorrow(TASKS.TOMORROW.ADD_TASK_TOMORROW)
     })

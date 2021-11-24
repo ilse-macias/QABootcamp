@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 export const URL = {
-    BASE_URL: "https://todoist.com/users/showlogin"
+    BASE_URL: process.env.BASE_URL
 }
 
 export const CREDENTIALS = {
@@ -13,7 +13,10 @@ export const CREDENTIALS = {
 }
 
 export const TASKS = {
-    ADD_TASK: process.env.ADD_TASK,
+    TODAY:{
+        ADD_TASK_TODAY: "HELLO"
+    },
+    
 
     TOMORROW:{
         ADD_TASK_TOMORROW: "HELLO TOM"
