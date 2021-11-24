@@ -7,14 +7,14 @@ import taskPage from '../pages/task-page'
 fixture('Login feature test')
     .page `${URL.BASE_URL}`
 
-    test.meta('type','smoke')('As a user I would like to log in to Todoist with a valid credentials', async t=> {
+    test.only.meta('type','smoke')('As a user I would like to log in to Todoist with a valid credentials', async t=> {
         await t
             .maximizeWindow()
         await loginPage
             .submitLoginForm(CREDENTIALS.STANDARDS_USER.EMAIL, CREDENTIALS.STANDARDS_USER.PASSWORD)
         await t    
-           //.expect(taskPage.todayLabel.exists).ok()
-          //  console.log(todayLabel)
+           .expect(taskPage.todayTitle.exists).ok()
+          console.log(todayTitle)
     })
     
     test.skip.meta('type', 'smoke')('Negative scenarios for login', async t=> {

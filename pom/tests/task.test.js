@@ -17,7 +17,7 @@ fixture('Task feature test')
             .addNewTaskForToday(TASKS.ADD_TASK)
     })
 
-    test('single task selecting tomorrow as the due date', async t=> {
+    test.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
         await t 
             .maximizeWindow()
 
