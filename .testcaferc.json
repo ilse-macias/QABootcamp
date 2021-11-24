@@ -1,0 +1,4 @@
+{
+    "skipJsErorrs": true,
+    "assertionTimeout": 10000
+}

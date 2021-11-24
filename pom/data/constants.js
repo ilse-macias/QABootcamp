@@ -11,3 +11,7 @@ export const CREDENTIALS = {
         PASSWORD: process.env.PASSWORD
     }
 }
+
+export const TASKS = {
+    ADD_TASK: process.env.ADD_TASK
+}
