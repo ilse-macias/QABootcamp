@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "testcafe chrome:headless,edge ./pom/tests"
+    "test": "testcafe chrome,edge:headless ./pom/tests"
   },
   "author": "Ilse Macías",
   "license": "ISC",

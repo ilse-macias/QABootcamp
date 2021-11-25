@@ -6,9 +6,14 @@ export const URL = {
 }
 
 export const CREDENTIALS = {
-    STANDARDS_USER: {
+    VALID_USER: {
         EMAIL: process.env.EMAIL,
         PASSWORD: process.env.PASSWORD
+    },
+
+    INVALID_USER:{
+        EMAIL:'XXXX',
+        PASSWORD:'XXXX'
     }
 }
 

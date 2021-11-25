@@ -18,7 +18,7 @@ fixture('Task feature test')
 
 
     //TO-DO: WORKING ON IT, WHEN WHEN USER NEEDS TO CLICK ON SCHEDULE.
-    test.only.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
+    test.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
         await t 
             .maximizeWindow()
 

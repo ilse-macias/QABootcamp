@@ -2,14 +2,14 @@ import { Selector, t } from "testcafe";
 
 class TaskPage{
     constructor(){
-        this.todayTitle = Selector('.simple_content')//.withExactText('Today')
+        this.todayTitle = Selector('.simple_content').withExactText('Today')
 
         this.addTaskPlus = Selector('.plus_add_button')
         this.addTaskInput = Selector('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr')//.task_editor__content_field')
         this.addTaskButton = Selector('.reactist_button.reactist_button--primary')
 
-        this.scheduleButton = Selector('.item_due_selector_text')
-        this.clickTomorrowOption = Selector('.scheduler-suggestions-item-label').withExactText('Tomorrow')
+        this.dueSelectorButton = Selector('.date.date_today')//'.item_due_selector_text')
+        this.clickTomorrowOption = Selector('.scheduler-suggestions-item').withExactText('Tomorrow')
     }
 
     //.expect(taskPage.todayTitle.exists).ok()
@@ -35,7 +35,7 @@ class TaskPage{
         await t
             .click(this.addTaskPlus)
             .typeText(this.addTaskInput, task)
-            .click(this.scheduleButton)
+            .click(this.dueSelectorButton)
             .click(this.addTaskButton)
             .click(this.clickTomorrowOption)
     }
