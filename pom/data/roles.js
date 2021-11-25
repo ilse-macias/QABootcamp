@@ -1,5 +1,5 @@
 import { Role } from "testcafe";
-import loginPage from "../pages/login-page";
+import loginPage from "../pages/loginPage";
 import { CREDENTIALS, URL } from "./constants";
 
 export const VALID_USER = Role(URL.BASE_URL, async() => {

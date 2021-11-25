@@ -1,7 +1,7 @@
 import {URL, CREDENTIALS} from '../data/constants'
 import { VALID_USER } from '../data/roles'
-import loginPage from '../pages/login-page'
-import taskPage from '../pages/task-page'
+import loginPage from '../pages/loginPage'
+import taskPage from '../pages/taskPage'
 
 
 fixture('Login feature test')

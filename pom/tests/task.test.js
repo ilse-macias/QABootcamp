@@ -1,6 +1,6 @@
 import {URL, CREDENTIALS, TASKS} from '../data/constants'
-import loginPage from '../pages/login-page'
-import taskPage from '../pages/task-page'
+import loginPage from '../pages/loginPage'
+import taskPage from '../pages/taskPage'
 
 fixture('Task feature test')
     .page `${URL.BASE_URL}`
