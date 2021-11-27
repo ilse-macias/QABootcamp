@@ -1,9 +1,21 @@
-import { Selector } from "testcafe"
+import { Selector, t } from "testcafe"
 
 class ProjectPage{
     constructor(){
-        this.addNewProject = Selector('#list_holder>div.sidebar_expansion_panel.expansion_panel.expansion_panel--expanded>div.expansion_panel__header>div>button')
+       //TODO: Validate project page
 
-        this.nameProject = Selector('#edit_project_modal_field_name')
+        this.nameProjectInput = Selector('#edit_project_modal_field_name')
+        this.colorProjectInput = Selector('.color_dropdown_select__name')
+        this.addProjectButton = Selector('.ist_button ist_button_red')
+
+        this.colorProjectDropDownList = Selector('color_dropdown_select__name').withExactText('Grape')
+    }
+
+    async CreateNewProject(project){
+        await t
+            .typeText(this.nameProjectInput, project, {paste: true})
+            .click(this.colorProjectInput)
+            .click(this.colorProjectDropDownList)
+            .click(this.addProjectButton)
     }
 }

@@ -5,7 +5,7 @@ import taskPage from '../pages/taskPage'
 fixture('Task feature test')
     .page `${URL.BASE_URL}`
 
-    test.only.meta('type', 'smoke')('As a user I wanna create a new task with Today as the due date', async t=> {
+    test.meta('type', 'smoke')('As a user I wanna create a new task with Today as the due date', async t=> {
         await t
             .maximizeWindow()
 
@@ -14,6 +14,8 @@ fixture('Task feature test')
 
         await taskPage
             .addNewTaskForToday(TASKS.TODAY.ADD_TASK_TODAY) 
+        
+        //await t.expect().ok
     })
 
 

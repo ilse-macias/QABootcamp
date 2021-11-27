@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1638042646574' stop='1638042646604'>
+    <name>Project feature</name>
+    <title>Project feature</title>
+    <test-cases>
+        <test-case start='1638042646574' status='failed' stop='1638042647490'>
+            <name>As a user I would create a new project, choose any color you like and add it to favorites.</name>
+            <title>As a user I would create a new project, choose any color you like and add it to favorites.</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='User Agent' value='Chrome 96.0.4664.45 / Windows 10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test has been broken</message>
+                <stack-trace>ReferenceError: VALID_USER is not defined
+                
+                Browser: Chrome 96.0.4664.45 / Windows 10
+                
+                    6 |fixture('Project feature')
+                    7 |    .page `${URL.BASE_URL}`
+                    8 |
+                    9 |    test.only.meta('type','smoke')('As a user I would create a new project, choose any color you like and add it to favorites.', async t=> {
+                   10 |        await t
+                 > 11 |            .useRole(VALID_USER)
+                   12 |        await commonPage
+                   13 |            .clickOnAddNewProject()
+                   14 |        })
+                   15 |    
+                
+                   at &lt;anonymous> (C:\Users\Ilse\Documents\GitHub\QABootcamp\pom\tests\project.test.js:11:22)
+                   at asyncGeneratorStep (C:\Users\Ilse\Documents\GitHub\QABootcamp\pom\tests\project.test.js:4:263)
+                   at _next (C:\Users\Ilse\Documents\GitHub\QABootcamp\pom\tests\project.test.js:4:601)
+                   at &lt;anonymous> (C:\Users\Ilse\Documents\GitHub\QABootcamp\pom\tests\project.test.js:4:766)
+                   at &lt;anonymous> (C:\Users\Ilse\Documents\GitHub\QABootcamp\pom\tests\project.test.js:4:507)
+                   at &lt;anonymous> (C:\Users\Ilse\Documents\GitHub\QABootcamp\pom\tests\project.test.js:9:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

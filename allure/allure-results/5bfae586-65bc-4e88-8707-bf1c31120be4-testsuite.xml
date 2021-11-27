@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1638041208301' stop='1638041208301'>
+    <name>Task feature test</name>
+    <title>Task feature test</title>
+    <test-cases>
+        <test-case start='1638041208301' status='passed' stop='1638041274675'>
+            <name>As a user I wanna create a new task with Today as the due date</name>
+            <title>As a user I wanna create a new task with Today as the due date</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='User Agent' value='Chrome 96.0.4664.45 / Windows 10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test has been passed.</message>
+                <stack-trace>no error</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
