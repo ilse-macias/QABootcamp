@@ -12,8 +12,8 @@ class LoginPage{
     async submitLoginForm(email, password){
         await t
             .maximizeWindow()
-            .typeText(this.emailInput, email)
-            .typeText(this.passwordInput, password)
+            .typeText(this.emailInput, email, {paste: true} ) 
+            .typeText(this.passwordInput, password, {paste: true} ) 
             .click(this.loginButton)
     }
 

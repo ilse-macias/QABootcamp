@@ -5,15 +5,15 @@ import taskPage from '../pages/taskPage'
 fixture('Task feature test')
     .page `${URL.BASE_URL}`
 
-    test.meta('type', 'smoke')('As a user I wanna create a new task with Today as the due date', async t=> {
+    test.only.meta('type', 'smoke')('As a user I wanna create a new task with Today as the due date', async t=> {
         await t
             .maximizeWindow()
 
         await loginPage
-            .submitLoginForm(CREDENTIALS.STANDARDS_USER.EMAIL, CREDENTIALS.STANDARDS_USER.PASSWORD)
+            .submitLoginForm(CREDENTIALS.VALID_USER.EMAIL, CREDENTIALS.VALID_USER.PASSWORD)
 
         await taskPage
-            .addNewTaskForToday(TASKS.TODAY.ADD_TASK_TODAY)
+            .addNewTaskForToday(TASKS.TODAY.ADD_TASK_TODAY) 
     })
 
 
@@ -23,7 +23,7 @@ fixture('Task feature test')
             .maximizeWindow()
 
         await loginPage
-            .submitLoginForm(CREDENTIALS.STANDARDS_USER.EMAIL, CREDENTIALS.STANDARDS_USER.PASSWORD)
+            .submitLoginForm(CREDENTIALS.VALID_USER.EMAIL, CREDENTIALS.VALID_USER.PASSWORD)
         
         await taskPage
         .addNewTaskForTomorrowSecondOption(TASKS.TODAY.ADD_TASK_TODAY)

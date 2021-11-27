@@ -20,21 +20,21 @@ class TaskPage{
     async addNewTaskForToday(task){
         await t
             .click(this.addTaskPlus)
-            .typeText(this.addTaskInput, task)
+            .typeText(this.addTaskInput, task, {paste: true})
             .click(this.addTaskButton)
     }
 
     async addNewTaskForTomorrow(task){
         await t
             .click(this.addTaskPlus)
-            .typeText(this.addTaskInput, task)
+            .typeText(this.addTaskInput, task, {paste: true})
             .click(this.addTaskButton)
     }
 
     async addNewTaskForTomorrowSecondOption(task){
         await t
             .click(this.addTaskPlus)
-            .typeText(this.addTaskInput, task)
+            .typeText(this.addTaskInput, task, {paste: true})
             .click(this.dueSelectorButton)
             .click(this.addTaskButton)
             .click(this.clickTomorrowOption)

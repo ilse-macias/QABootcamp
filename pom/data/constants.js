@@ -19,7 +19,7 @@ export const CREDENTIALS = {
 
 export const TASKS = {
     TODAY:{
-        ADD_TASK_TODAY: "HELLO"
+        ADD_TASK_TODAY: process.env.ADD_TASK
     },
     
 

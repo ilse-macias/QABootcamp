@@ -20,7 +20,7 @@ fixture('Login feature test')
             .expect(loginPage.errorMessageInvalidCredentials.exists).ok()  
     })
 
-    test.only.meta('type', 'smoke')('As a user I logged in with an valid email and wrong password', async t=> {
+    test.meta('type', 'smoke')('As a user I logged in with an valid email and wrong password', async t=> {
         await loginPage
             .submitLoginForm(CREDENTIALS.VALID_USER.EMAIL, CREDENTIALS.INVALID_USER.PASSWORD)
         await t
