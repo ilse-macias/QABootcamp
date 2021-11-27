@@ -7,8 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "testcafe chrome:headless,edge ./pom/tests --reporter allure",
-    "smoke-test": "testcafe chrome:headless,edge ./pom/tests --test-meta type=smoke",
+    "test": "testcafe chrome:headless,edge ./pom/tests",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",

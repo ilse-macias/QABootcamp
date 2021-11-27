@@ -7,15 +7,11 @@ class TaskPage{
         this.addTaskPlus = Selector('.plus_add_button')
         this.addTaskInput = Selector('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr')//.task_editor__content_field')
         this.addTaskButton = Selector('.reactist_button.reactist_button--primary')
+        this.taskCreatedTextbox = Selector('.task_list_item__content__wrapper').withText('World')
 
         this.dueSelectorButton = Selector('.date.date_today')//'.item_due_selector_text')
         this.clickTomorrowOption = Selector('.scheduler-suggestions-item').withExactText('Tomorrow')
     }
-
-    //.expect(taskPage.todayTitle.exists).ok()
-    // async assertTodayTitle(){
-    //     await t.expect(this.todayTitle.exists).ok()//('Today'))
-    // }
 
     async addNewTaskForToday(task){
         await t
