@@ -24,6 +24,6 @@ export const TASKS = {
     
 
     TOMORROW:{
-        ADD_TASK_TOMORROW: "HELLO TOM"
+        ADD_TASK_TOMORROW: "Hello TOM"
     }
 }

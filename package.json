@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "testcafe chrome:headless,edge ./pom/tests",
+    "test": "testcafe edge:headless,chrome ./pom/tests",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",

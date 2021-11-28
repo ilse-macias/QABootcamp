@@ -19,3 +19,5 @@ class ProjectPage{
             .click(this.addProjectButton)
     }
 }
+
+export default new ProjectPage
