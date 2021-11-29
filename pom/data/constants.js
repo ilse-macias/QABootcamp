@@ -27,3 +27,7 @@ export const TASKS = {
         ADD_TASK_TOMORROW: "Hello TOM"
     }
 }
+
+export const PROJECT = {
+    ADD_PROJECT: process.env.ADD_PROJECT
+}

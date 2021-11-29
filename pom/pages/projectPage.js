@@ -1,4 +1,5 @@
 import { Selector, t } from "testcafe"
+import commonPage from "./commonPage"
 
 class ProjectPage{
     constructor(){
@@ -6,16 +7,20 @@ class ProjectPage{
 
         this.nameProjectInput = Selector('#edit_project_modal_field_name')
         this.colorProjectInput = Selector('.color_dropdown_select__name')
-        this.addProjectButton = Selector('.ist_button ist_button_red')
+        this.favoriteSwitch = Selector('.reactist_switch--handle')
+        this.addProjectButton = Selector('.ist_button.ist_button_red')
 
-        this.colorProjectDropDownList = Selector('color_dropdown_select__name').withExactText('Grape')
+        this.colorProjectDropDownList = Selector('.color_dropdown_select__name').withExactText('Grape')
     }
 
     async CreateNewProject(project){
+        await commonPage
+            .clickOnAddNewProject()
         await t
             .typeText(this.nameProjectInput, project, {paste: true})
             .click(this.colorProjectInput)
             .click(this.colorProjectDropDownList)
+            .click(this.favoriteSwitch)
             .click(this.addProjectButton)
     }
 }

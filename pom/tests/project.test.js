@@ -1,16 +1,21 @@
-import {URL, CREDENTIALS, TASKS} from '../data/constants'
+import {URL, CREDENTIALS, TASKS, PROJECT} from '../data/constants'
 import commonPage from '../pages/commonPage'
 import { VALID_USER } from '../data/roles'
-import loginPage from '../pages/loginPage'
-import taskPage from '../pages/taskPage'
+import projectPage from '../pages/projectPage'
 
 fixture('Project feature')
     .page `${URL.BASE_URL}`
 
-    test.meta('type','smoke')('As a user I would create a new project, choose any color you like and add it to favorites.', async t=> {
+    //TO-DO: CREATE ASSERTION
+    test.only.meta('type','smoke')('As a user I would create a new project, choose any color you like and add it to favorites.', async t=> {
         await t
             .useRole(VALID_USER)
         await commonPage
             .clickOnAddNewProject()
+        await projectPage
+            .CreateNewProject(PROJECT.ADD_PROJECT)
+         await t
+             .wait(6000)
+         //   .expect(commonPage.lastProjectAdded.exists).ok({setTimeout:6000})
         })
     
