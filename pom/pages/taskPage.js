@@ -1,6 +1,6 @@
 import { Selector, t } from "testcafe";
 
-class TaskPage{
+class TaskPage{ //byDefault: TodayPage
     constructor(){
         this.todayTitle = Selector('.simple_content').withExactText('Today')
 
