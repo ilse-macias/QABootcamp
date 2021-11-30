@@ -7,7 +7,7 @@ import taskPage from '../pages/taskPage'
 fixture('Task feature test')
     .page `${URL.BASE_URL}`
 
-    test.meta('type', 'smoke')('As a user I want to create a new task with Today as the due date', async t=> {
+    test.only.meta('type', 'smoke')('As a user I want to create a new task with Today as the due date', async t=> {
         await t
             .useRole(VALID_USER)
         
@@ -18,18 +18,18 @@ fixture('Task feature test')
             .expect(taskPage.taskCreatedTextbox.exists).ok({timeout:10000})
     })
 
-    //TO-DO: ASSERTION
+    //TO-DO: Create Assertion: today counter/text implemented.
     test.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
         await t
             .useRole(VALID_USER)
         
         await taskPage
             .addNewTaskForTomorrowSecondOption(TASKS.TODAY.ADD_TASK_TODAY)
-           // .addNewTaskForTomorrow(TASKS.TOMORROW.ADD_TASK_TOMORROW)
+           // .addNewTaskForTomorrow(TASKS.TOMORROW.ADD_TASK_TOMORROW) //Other option to add a task for 'Tomorrow'
 
         await commonPage
             .upcomingTaskPage()
             await t
-                .wait(10000) 
+                .wait(10000) //This will remove until the assertion is created.
             //.expect(taskPage.taskCreatedTextbox.exists).ok({timeout:10000})
     })

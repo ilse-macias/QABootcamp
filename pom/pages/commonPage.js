@@ -10,11 +10,13 @@ class commonPage{
         //Projects
         this.expandProjectPanel = Selector('.expansion_panel__toggle').withExactText('Project')
         this.adderIcon = Selector('.adder_icon').child(0)
-        this.lastProjectAdded = Selector('.text').child(-1) //testing for project
+        this.lastProjectAdded = Selector('.text').nth(-1) 
 
+        //Favorites
+        this.lastProjectFavorite = Selector('.FnFY2YlPR10DcnOkjvMMmA==')
 
         /*Right Pannel: Inbox, Today and Upcoming*/
-        this.tasksList = Selector('.task_list_item__content__wrapper').child(0)
+        this.tasksList = Selector('.task_list_item__content__wrapper').nth(-1)
 
         /*Modal for tasks*/
         this.moreOptionIcon = Selector('.item_action.item_actions_more')
@@ -27,7 +29,6 @@ class commonPage{
     async upcomingTaskPage(){
         await t
             .click(this.upcomingOption)
-       //UPCOMING PAGE. insert a validation the user must verify the previous task (last position) is visible on 'Tomorrow" section
     }
 
     async clickOnAddNewProject(){

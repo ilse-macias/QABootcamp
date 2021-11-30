@@ -7,13 +7,15 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "testcafe edge:headless,chrome ./pom/tests",
+    "test": "testcafe edge:headless,chrome:headless ./pom/tests",
+    "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "eslint-plugin-testcafe": "^0.2.1",
     "testcafe": "^1.17.1",
     "testcafe-reporter-allure": "^1.0.5"
   },
