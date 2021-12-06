@@ -1,0 +1,49 @@
+{
+	"id": "8f1b2b47-b2cc-44ea-9550-c4a0d67c9351",
+	"name": "Todoist Environment",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://api.todoist.com/rest/v1",
+			"enabled": true
+		},
+		{
+			"key": "id",
+			"value": "5146311570",
+			"enabled": false
+		},
+		{
+			"key": "token",
+			"value": "ee4f6fc8132b962b0999eb367ee21b8a2f91f95a",
+			"enabled": true
+		},
+		{
+			"key": "idProject",
+			"value": "2279778127",
+			"enabled": true
+		},
+		{
+			"key": "idProjectNegative",
+			"value": "0213450231",
+			"enabled": true
+		},
+		{
+			"key": "idTask",
+			"value": "5389635911",
+			"enabled": true
+		},
+		{
+			"key": "idTaskNegative",
+			"value": "111222",
+			"enabled": true
+		},
+		{
+			"key": "nameProject",
+			"value": "Nombre Proyecto",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-12-06T06:21:58.501Z",
+	"_postman_exported_using": "Postman/9.3.1-211203-1700"
+}

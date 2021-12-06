@@ -1,0 +1,1376 @@
+{
+	"info": {
+		"_postman_id": "0db54632-b1bb-49bc-a843-45a34617724d",
+		"name": "Todoist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Get all projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"JSON Schema Validation\", function () {\r",
+									"    const schema = {\r",
+									"        \"id\": \"int\",\r",
+									"        \"name\": \"string\",\r",
+									"        \"comment_count\": \"int\",\r",
+									"        \"order\": \"int\",\r",
+									"        \"color\": \"int\",\r",
+									"        \"shared\": \"boolean\",\r",
+									"        \"favorite\": \"boolean\",\r",
+									"        \"url\": \"string\"\r",
+									"    }\r",
+									"\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/projects",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Get all projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.response.to.be.notFound\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/project",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"JSON Schema Validation\", function () {\r",
+									"    const schema = {\r",
+									"        \"id\": \"int\",\r",
+									"        \"name\": \"string\",\r",
+									"        \"comment_count\": \"int\",\r",
+									"        \"color\": \"int\",\r",
+									"        \"shared\": \"boolean\",\r",
+									"        \"favorite\": \"boolean\",\r",
+									"        \"url\": \"string\"\r",
+									"    }\r",
+									"\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});\r",
+									"\r",
+									"// pm.environment.set(\"nameProject\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// When Creating a New Project there should be a pre-request script that\r",
+									"// adds the project’s name into the environment, and after execution it should\r",
+									"// clear that variable. Also save the Project’s id into an environment variable to\r",
+									"// use it later on other requests. This is applicable to Create a new task too.\r",
+									"\r",
+									"// CONST jsonData = PM.REQUEST.TOJSON();\r",
+									"// PM.ENVIRONMENT.SET(\"IDPROJECT\", \"jsonData.IDPROJECT\");\r",
+									"\r",
+									"\r",
+									" //pm.environment.set(\"nameProject\", \"Deliverable 2\")\r",
+									"// // pm.environment.set(\"nameProject\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{$randomCountry}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/projects",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Create a new project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.response.to.be.notFound\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// When Creating a New Project there should be a pre-request script that\r",
+									"// adds the project’s name into the environment, and after execution it should\r",
+									"// clear that variable. Also save the Project’s id into an environment variable to\r",
+									"// use it later on other requests. This is applicable to Create a new task too.\r",
+									"\r",
+									"// const jsonData = pm.request.toJSON();\r",
+									"// pm.environment.set(\"idProject\", \"jsonData.idProject\");\r",
+									"\r",
+									"\r",
+									"// pm.environment.set(\"nameProject\", \"Deliverable 2\")\r",
+									"// pm.environment.set(\"nameProject\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{$randomCountry}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/project",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"JSON Schema Validation\", function () {\r",
+									"    const schema = {\r",
+									"        \"id\": \"int\",\r",
+									"        \"name\": \"string\",\r",
+									"        \"comment_count\": \"int\",\r",
+									"        \"order\": \"int\",\r",
+									"        \"color\": \"int\",\r",
+									"        \"shared\": \"boolean\",\r",
+									"        \"favorite\": \"boolean\",\r",
+									"        \"url\": \"string\"\r",
+									"    }\r",
+									"\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/projects/:idProject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								":idProject"
+							],
+							"variable": [
+								{
+									"key": "idProject",
+									"value": "{{idProject}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Get a project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Server\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// pm.environment.set(\"idProject\", \"2279609244\");\r",
+									"// pm.environment.unset(\"2279609244\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/projects/:idProject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								":idProject"
+							],
+							"variable": [
+								{
+									"key": "idProject",
+									"value": "{{idProjectNegative}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bootcamp - API\",\r\n    \"color\": \"30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/projects/:idProject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								":idProject"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "idProject",
+									"value": "{{idProject}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Update a project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.contains(\"Internal Server Error\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bootcamp - API\",\r\n    \"color\": \"30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/projects/:idProject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								":idProject"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "idProject",
+									"value": "{{idProjectNegative}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/projects/:idProject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								":idProject"
+							],
+							"variable": [
+								{
+									"key": "idProject",
+									"value": "{{idProject}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Delete a project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Server\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/projects/:idProject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								":idProject"
+							],
+							"variable": [
+								{
+									"key": "idProject",
+									"value": "{{idProjectNegative}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Get active tasks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"JSON Schema Validation\", function () {\r",
+									"    const schema = {\r",
+									"        \"id\": \"int\",\r",
+									"        \"assigner\": \"int\",\r",
+									"        \"project_id\": \"int\",\r",
+									"        \"section_id\": \"int\",\r",
+									"        \"order\": \"int\",\r",
+									"        \"content\": \"string\",\r",
+									"        \"description\": \"string\",\r",
+									"        \"completed\": \"boolean\",\r",
+									"        \"label_ids\": [],\r",
+									"        \"priority\": \"int\",\r",
+									"        \"comment_count\": \"int\",\r",
+									"        \"url\": \"string\"\r",
+									"    }\r",
+									"\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Get active tasks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.to.be.notFound)\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"JSON Schema Validation\", function () {\r",
+									"    const schema = {\r",
+									"        \"id\": \"int\",\r",
+									"        \"assigner\": \"int\",\r",
+									"        \"project_id\": \"int\",\r",
+									"        \"section_id\": \"int\",\r",
+									"        \"order\": \"int\",\r",
+									"        \"content\": \"string\",\r",
+									"        \"description\": \"string\",\r",
+									"        \"completed\": \"boolean\",\r",
+									"        \"label_ids\": [],\r",
+									"        \"priority\": \"int\",\r",
+									"        \"comment_count\": \"int\",\r",
+									"        \"url\": \"string\"\r",
+									"    }\r",
+									"\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});\r",
+									"\r",
+									"pm.environment.unset(\"nameTask\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// When Creating a New Project there should be a pre-request script that\r",
+									"// adds the project’s name into the environment, and after execution it should\r",
+									"// clear that variable. Also save the Project’s id into an environment variable to\r",
+									"// use it later on other requests. This is applicable to Create a new task too.\r",
+									"\r",
+									"// let jsonData;\r",
+									"// pm.environment.set(\"nameTask\", \"jsonData.idTask\");\r",
+									"\r",
+									"// pm.environment.set(\"nameProject\", \"Deliverable 2\")\r",
+									"// pm.environment.set(\"nameProject\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"This is a API II\", \r\n    \"description\": \"tomorrow at 12:00\", \r\n    \"due_lang\": \"en\", \r\n    \"priority\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Create a new task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.to.be.notFound)\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//pm.environment.unset(\"idTask\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//project name into the environment, and after execution it should clear that variable. save the Project’s id into an environment variable to\r",
+									"//use it later on other requests. This is applicable to Create a new task too.\r",
+									"pm.globals.set(\"{nameTask}\", \"variable_value\");\r",
+									"pm.environment.unset(\"{nameTask}\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"This is a API\", \r\n    \"description\": \"tomorrow at 12:00\", \r\n    \"due_lang\": \"en\", \r\n    \"priority\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an active task",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//project name into the environment, and after execution it should clear that variable. save the Project’s id into an environment variable to\r",
+									"//use it later on other requests. This is applicable to Create a new task too.\r",
+									"\r",
+									"// const jsonData = pm.response.json()\r",
+									"// pm.globals.set(\"idTask\", jsonData.id);\r",
+									"// pm.environment.unset(\"idTask\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"JSON Schema Validation\", function () {\r",
+									"    const schema = {\r",
+									"        \"id\": \"int\",\r",
+									"        \"assigner\": \"int\",\r",
+									"        \"project_id\": \"int\",\r",
+									"        \"section_id\": \"int\",\r",
+									"        \"order\": \"int\",\r",
+									"        \"content\": \"string\",\r",
+									"        \"description\": \"string\",\r",
+									"        \"completed\": \"boolean\",\r",
+									"        \"label_ids\": [],\r",
+									"        \"priority\": \"int\",\r",
+									"        \"comment_count\": \"int\",\r",
+									"        \"url\": \"string\"\r",
+									"    }\r",
+									"\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:idTask",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":idTask"
+							],
+							"variable": [
+								{
+									"key": "idTask",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Get an active task",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Error\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTaskNegative}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"//pm.environment.unset(\"idTask\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// pm.environment.set(\"idTask\", jsonData.id);\r",
+									"// pm.environment.unset(\"idTask\");\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Wizeline demo\", \r\n    \"description\": \"tomorrow at 3:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks/:idTask",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":idTask"
+							],
+							"variable": [
+								{
+									"key": "idTask",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Update a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.text().includes(\"not found\"))\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Soy Milk\", \r\n    \"description\": \"tomorrow at 3:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks/:idTaskNegative",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":idTaskNegative"
+							],
+							"variable": [
+								{
+									"key": "idTaskNegative",
+									"value": "15640237894"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Close a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//pm.environment.unset(\"idTask\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId/close",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId",
+								"close"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Close a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.response.to.be.clientError\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId/close",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId",
+								"close"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reopen a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//pm.environment.unset(\"idTask\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId/reopen",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId",
+								"reopen"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Reopen a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.response.to.be.clientError\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId/reopen",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId",
+								"reopen"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//pm.environment.unset(\"idTask\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTask}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative - Delete a task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content of the response's body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Server Error\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/:taskId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "{{idTaskNegative}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Response time is less than 900ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(900);",
+					"});",
+					"",
+					"pm.test(\"Content-Type is present\", function () {",
+					"    pm.response.to.have.header(\"Content-Type\");",
+					"});",
+					"",
+					"pm.test(\"Content-Type is application/json\", function () {",
+					"    pm.expect(pm.response.headers.get(\"Content-Type\").to(\"application/json\"));",
+					"});"
+				]
+			}
+		}
+	]
+}

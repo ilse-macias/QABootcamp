@@ -9,6 +9,7 @@
   "scripts": {
     "test": "testcafe edge:headless,chrome:headless ./pom/tests",
     "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
+    "api-testing": "newman run .api/Todoist_collection_postman",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
@@ -16,10 +17,12 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "eslint-plugin-testcafe": "^0.2.1",
+    "newman": "^5.3.0",
     "testcafe": "^1.17.1",
     "testcafe-reporter-allure": "^1.0.5"
   },
   "devDependencies": {
+    "chai-postman": "^2.0.1",
     "eslint": "^8.3.0"
   }
 }
