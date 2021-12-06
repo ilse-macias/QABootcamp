@@ -91,9 +91,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.todoist.com/rest/v1/project",
+							"raw": "{{url}}/project",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"{{url}}"
 							],
 							"path": [
 								"project"
@@ -158,9 +158,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.todoist.com/rest/v1/projects",
+							"raw": "{{url}}/projects",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"{{url}}"
 							],
 							"path": [
 								"projects"
@@ -1342,8 +1342,12 @@
 					"});",
 					"",
 					"pm.test(\"Content-Type is application/json\", function () {",
-					"    pm.expect(pm.response.headers.get(\"Content-Type\").to(\"application/json\"));",
-					"});"
+					"    pm.expect(pm.response.headers.get(\"Content-Type\").to.eql(\"application/json\"));",
+					"});",
+					"",
+					"pm.test(\"Response must have a valid content\"), function(){",
+					"    pm.response.to.be.withBody;",
+					"}"
 				]
 			}
 		}

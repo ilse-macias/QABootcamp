@@ -1,5 +1,5 @@
 import { Selector, t } from "testcafe"
-import commonPage from "./commonPage"
+import CommonPage from "./commonPage"
 
 class ProjectPage{
     constructor(){
@@ -14,7 +14,7 @@ class ProjectPage{
     }
 
     async CreateNewProject(project){
-        await commonPage
+        await CommonPage
             .clickOnAddNewProject()
         await t
             .typeText(this.nameProjectInput, project, {paste: true})

@@ -1,6 +1,6 @@
 import { Selector, t } from "testcafe"
 
-class commonPage{
+class CommonPage{
     constructor(){
         /*Menu left side*/
 
@@ -46,4 +46,4 @@ class commonPage{
     }
 }
 
-export default new commonPage
+export default new CommonPage

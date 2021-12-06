@@ -1,6 +1,6 @@
 import {URL, CREDENTIALS} from '../data/constants'
 import { VALID_USER } from '../data/roles'
-import commonPage from '../pages/commonPage'
+import CommonPage from '../pages/commonPage'
 
 fixture('Delete task feature test')
     .page `${URL.BASE_URL}`
@@ -9,7 +9,7 @@ fixture('Delete task feature test')
     test.meta('type','smoke')('Delete every task created (if there is any)', async t=> {
         await t
             .useRole(VALID_USER)
-        await commonPage
+        await CommonPage
             .clickOnInboxSection()
         await t.wait(5000) //This will remove until the assertion is created.
     })

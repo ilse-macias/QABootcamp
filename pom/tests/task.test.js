@@ -1,6 +1,6 @@
 import {URL, CREDENTIALS, TASKS} from '../data/constants'
 import { VALID_USER } from '../data/roles'
-import commonPage from '../pages/commonPage'
+import CommonPage from '../pages/commonPage'
 import loginPage from '../pages/loginPage'
 import taskPage from '../pages/taskPage'
 
@@ -27,7 +27,7 @@ fixture('Task feature test')
             .addNewTaskForTomorrowSecondOption(TASKS.TODAY.ADD_TASK_TODAY)
            // .addNewTaskForTomorrow(TASKS.TOMORROW.ADD_TASK_TOMORROW) //Other option to add a task for 'Tomorrow'
 
-        await commonPage
+        await CommonPage
             .upcomingTaskPage()
             await t
                 .wait(10000) //This will remove until the assertion is created.
