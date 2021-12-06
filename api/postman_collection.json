@@ -50,9 +50,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/projects",
+							"raw": "https://api.todoist.com/rest/v1/projects",
 							"host": [
-								"{{url}}"
+								"https://api.todoist.com/rest/v1"
 							],
 							"path": [
 								"projects"
@@ -91,9 +91,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/project",
+							"raw": "https://api.todoist.com/rest/v1/project",
 							"host": [
-								"{{url}}"
+								"https://api.todoist.com/rest/v1"
 							],
 							"path": [
 								"project"
@@ -127,7 +127,10 @@
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});\r",
 									"\r",
-									"// pm.environment.set(\"nameProject\");"
+									"const jsonData = pm.response.json()\r",
+									"pm.environment.set(\"projectId\", jsonData.id);\r",
+									"\r",
+									"pm.environment.unset(\"{{$randomCountry}}\");"
 								],
 								"type": "text/javascript"
 							}
@@ -136,17 +139,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"// When Creating a New Project there should be a pre-request script that\r",
-									"// adds the project’s name into the environment, and after execution it should\r",
-									"// clear that variable. Also save the Project’s id into an environment variable to\r",
-									"// use it later on other requests. This is applicable to Create a new task too.\r",
-									"\r",
-									"// CONST jsonData = PM.REQUEST.TOJSON();\r",
-									"// PM.ENVIRONMENT.SET(\"IDPROJECT\", \"jsonData.IDPROJECT\");\r",
-									"\r",
-									"\r",
-									" //pm.environment.set(\"nameProject\", \"Deliverable 2\")\r",
-									"// // pm.environment.set(\"nameProject\");"
+									"pm.environment.set(\"projectName\", \"{{$randomCountry}}\");"
 								],
 								"type": "text/javascript"
 							}
@@ -189,7 +182,9 @@
 									"\r",
 									"pm.test(\"Content of the response's body\", function () {\r",
 									"    pm.response.to.be.notFound\r",
-									"});"
+									"});\r",
+									"\r",
+									"pm.environment.unset(\"{{$randomCountry}}\");"
 								],
 								"type": "text/javascript"
 							}
@@ -198,17 +193,8 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"// When Creating a New Project there should be a pre-request script that\r",
-									"// adds the project’s name into the environment, and after execution it should\r",
-									"// clear that variable. Also save the Project’s id into an environment variable to\r",
-									"// use it later on other requests. This is applicable to Create a new task too.\r",
-									"\r",
-									"// const jsonData = pm.request.toJSON();\r",
-									"// pm.environment.set(\"idProject\", \"jsonData.idProject\");\r",
-									"\r",
-									"\r",
-									"// pm.environment.set(\"nameProject\", \"Deliverable 2\")\r",
-									"// pm.environment.set(\"nameProject\");"
+									"pm.environment.set(\"projectName\", \"{{$randomCountry}}\");\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -219,7 +205,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"{{$randomCountry}}\"\r\n}",
+							"raw": "{\r\n    \"name\": \"New Project\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -292,7 +278,7 @@
 							"variable": [
 								{
 									"key": "idProject",
-									"value": "{{idProject}}"
+									"value": "{{projectId}}"
 								}
 							]
 						}
@@ -306,12 +292,12 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 500\", function () {\r",
-									"    pm.response.to.have.status(500);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Content of the response's body\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"Server\");\r",
+									"    pm.response.to.be.notFound\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -332,18 +318,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/projects/:idProject",
+							"raw": "{{url}}/project/:idProject",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"projects",
+								"project",
 								":idProject"
 							],
 							"variable": [
 								{
 									"key": "idProject",
-									"value": "{{idProjectNegative}}"
+									"value": "{{projectId}}"
 								}
 							]
 						}
@@ -397,7 +383,7 @@
 							"variable": [
 								{
 									"key": "idProject",
-									"value": "{{idProject}}"
+									"value": "{{projectId}}"
 								}
 							]
 						}
@@ -500,7 +486,7 @@
 							"variable": [
 								{
 									"key": "idProject",
-									"value": "{{idProject}}"
+									"value": "{{projectId}}"
 								}
 							]
 						}
@@ -696,7 +682,10 @@
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});\r",
 									"\r",
-									"pm.environment.unset(\"nameTask\");"
+									"const jsonData = pm.response.json()\r",
+									"pm.environment.set(\"taskId\", jsonData.id);\r",
+									"\r",
+									"pm.environment.unset(\"{{$randomLoremSentence}}\");"
 								],
 								"type": "text/javascript"
 							}
@@ -705,16 +694,8 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"// When Creating a New Project there should be a pre-request script that\r",
-									"// adds the project’s name into the environment, and after execution it should\r",
-									"// clear that variable. Also save the Project’s id into an environment variable to\r",
-									"// use it later on other requests. This is applicable to Create a new task too.\r",
-									"\r",
-									"// let jsonData;\r",
-									"// pm.environment.set(\"nameTask\", \"jsonData.idTask\");\r",
-									"\r",
-									"// pm.environment.set(\"nameProject\", \"Deliverable 2\")\r",
-									"// pm.environment.set(\"nameProject\");"
+									"pm.environment.set(\"nameTask\", \"{{$randomLoremSentence}}\")\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -725,7 +706,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"content\": \"This is a API II\", \r\n    \"description\": \"tomorrow at 12:00\", \r\n    \"due_lang\": \"en\", \r\n    \"priority\": 4\r\n}",
+							"raw": "{\r\n    \"content\": \"{{$randomLoremSentence}}\", \r\n    \"description\": \"tomorrow at 12:00\", \r\n    \"due_lang\": \"en\", \r\n    \"priority\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -757,10 +738,7 @@
 									"\r",
 									"pm.test(\"Content of the response's body\", function () {\r",
 									"    pm.expect(pm.response.to.be.notFound)\r",
-									"});\r",
-									"\r",
-									"\r",
-									"//pm.environment.unset(\"idTask\");"
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -769,10 +747,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"//project name into the environment, and after execution it should clear that variable. save the Project’s id into an environment variable to\r",
-									"//use it later on other requests. This is applicable to Create a new task too.\r",
-									"pm.globals.set(\"{nameTask}\", \"variable_value\");\r",
-									"pm.environment.unset(\"{nameTask}\");"
+									"pm.environment.set(\"nameTask\", \"{{$randomLoremSentence}}\")"
 								],
 								"type": "text/javascript"
 							}
@@ -865,7 +840,7 @@
 							"variable": [
 								{
 									"key": "idTask",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
@@ -975,7 +950,7 @@
 							"variable": [
 								{
 									"key": "idTask",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
@@ -989,12 +964,12 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 404\", function () {\r",
-									"    pm.response.to.have.status(404);\r",
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Content of the response's body\", function () {\r",
-									"    pm.expect(pm.response.text().includes(\"not found\"))\r",
+									"    pm.expect(pm.response.text().includes(\"Server Error\"))\r",
 									"});\r",
 									""
 								],
@@ -1026,7 +1001,7 @@
 							"variable": [
 								{
 									"key": "idTaskNegative",
-									"value": "15640237894"
+									"value": "{{idTaskNegative}}"
 								}
 							]
 						}
@@ -1067,7 +1042,7 @@
 							"variable": [
 								{
 									"key": "taskId",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
@@ -1109,7 +1084,7 @@
 							"variable": [
 								{
 									"key": "taskId",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
@@ -1160,7 +1135,7 @@
 							"variable": [
 								{
 									"key": "taskId",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
@@ -1212,7 +1187,7 @@
 							"variable": [
 								{
 									"key": "taskId",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
@@ -1262,7 +1237,7 @@
 							"variable": [
 								{
 									"key": "taskId",
-									"value": "{{idTask}}"
+									"value": "{{taskId}}"
 								}
 							]
 						}
