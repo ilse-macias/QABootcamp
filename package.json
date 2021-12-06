@@ -9,7 +9,7 @@
   "scripts": {
     "test": "testcafe edge:headless,chrome:headless ./pom/tests",
     "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
-    "api-testing": "newman run .api/Todoist_collection_postman",
+    "api-testing": "newman run ./api/postman_collection.json",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
