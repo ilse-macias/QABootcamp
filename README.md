@@ -51,6 +51,7 @@ In this deliverable is about "API testing" using Postman as a tool and export it
 4. Save the json file.
 
 <b> How to implement on the front-end project <b>
+  
 * Once exported the collections and environments, create a folder named "api" from root from your front-end project and those JSON must be on that folder.
 * To execute them, install newman and on the **package.json** add the path where the api-test is.
 
