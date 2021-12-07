@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "0db54632-b1bb-49bc-a843-45a34617724d",
-		"name": "Todoist",
+		"_postman_id": "e6ba6202-230c-4829-bae8-1d8d1b41e106",
+		"name": "Todoist Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -51,10 +51,15 @@
 						},
 						"url": {
 							"raw": "https://api.todoist.com/rest/v1/projects",
+							"protocol": "https",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects"
 							]
 						}
@@ -91,11 +96,16 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/project",
+							"raw": "https://api.todoist.com/rest/v1/project",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"project"
 							]
 						}
@@ -158,11 +168,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/projects",
+							"raw": "https://api.todoist.com/rest/v1/projects",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects"
 							]
 						}
@@ -213,11 +228,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/project",
+							"raw": "https://api.todoist.com/rest/v1/project",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"project"
 							]
 						}
@@ -267,11 +287,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/projects/:idProject",
+							"raw": "https://api.todoist.com/rest/v1/projects/:idProject",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects",
 								":idProject"
 							],
@@ -318,11 +343,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/project/:idProject",
+							"raw": "https://api.todoist.com/rest/v1/project/:idProject",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"project",
 								":idProject"
 							],
@@ -365,11 +395,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/projects/:idProject",
+							"raw": "https://api.todoist.com/rest/v1/projects/:idProject",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects",
 								":idProject"
 							],
@@ -422,11 +457,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/projects/:idProject",
+							"raw": "https://api.todoist.com/rest/v1/projects/:idProject",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects",
 								":idProject"
 							],
@@ -475,11 +515,16 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/projects/:idProject",
+							"raw": "https://api.todoist.com/rest/v1/projects/:idProject",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects",
 								":idProject"
 							],
@@ -525,11 +570,16 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/projects/:idProject",
+							"raw": "https://api.todoist.com/rest/v1/projects/:idProject",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"projects",
 								":idProject"
 							],
@@ -606,11 +656,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks",
+							"raw": "https://api.todoist.com/rest/v1/tasks",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks"
 							]
 						}
@@ -641,11 +696,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/task",
+							"raw": "https://api.todoist.com/rest/v1/task",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"task"
 							]
 						}
@@ -715,10 +775,15 @@
 						},
 						"url": {
 							"raw": "https://api.todoist.com/rest/v1/tasks",
+							"protocol": "https",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks"
 							]
 						}
@@ -766,11 +831,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/task",
+							"raw": "https://api.todoist.com/rest/v1/task",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"task"
 							]
 						}
@@ -829,11 +899,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:idTask",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:idTask",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":idTask"
 							],
@@ -879,11 +954,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId"
 							],
@@ -939,11 +1019,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/tasks/:idTask",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:idTask",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":idTask"
 							],
@@ -990,11 +1075,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/tasks/:idTaskNegative",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:idTaskNegative",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":idTaskNegative"
 							],
@@ -1030,11 +1120,16 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId/close",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId/close",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId",
 								"close"
@@ -1072,11 +1167,16 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId/close",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId/close",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId",
 								"close"
@@ -1123,11 +1223,16 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId/reopen",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId/reopen",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId",
 								"reopen"
@@ -1175,11 +1280,16 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId/reopen",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId/reopen",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId",
 								"reopen"
@@ -1226,11 +1336,16 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId"
 							],
@@ -1267,11 +1382,16 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tasks/:taskId",
+							"raw": "https://api.todoist.com/rest/v1/tasks/:taskId",
+							"protocol": "https",
 							"host": [
-								"{{url}}"
+								"api",
+								"todoist",
+								"com"
 							],
 							"path": [
+								"rest",
+								"v1",
 								"tasks",
 								":taskId"
 							],
@@ -1342,7 +1462,7 @@
 					"});",
 					"",
 					"pm.test(\"Content-Type is application/json\", function () {",
-					"    pm.expect(pm.response.headers.get(\"Content-Type\").to.eql(\"application/json\"));",
+					"    pm.expect(pm.response.headers.get(\"Content-Type\").to(\"application/json\"));",
 					"});",
 					"",
 					"pm.test(\"Response must have a valid content\"), function(){",

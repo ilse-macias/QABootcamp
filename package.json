@@ -13,7 +13,8 @@
     "test-project" : "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
     "test-task" : "testcafe chrome:headless,firefox ./pom/tests/task.test.js",
     "test-delete" : "testcafe chrome:headless,firefox ./pom/tests/delete.test.js",
-    "api-testing": "newman run ./api/postman_collection.json",
+    "api-testing": "newman run ./api/postman_collection2.json",
+    "api-testing-url-environment": "newman run ./api/postman_collection.json",
     "lint": "eslint ./pom",
     "lint-init": "eslint --init"
   },

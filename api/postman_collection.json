@@ -50,9 +50,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.todoist.com/rest/v1/projects",
+							"raw": "{{url}}/projects",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"{{url}}"
 							],
 							"path": [
 								"projects"
@@ -91,9 +91,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.todoist.com/rest/v1/project",
+							"raw": "{{url}}/project",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"{{url}}"
 							],
 							"path": [
 								"project"
@@ -158,9 +158,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.todoist.com/rest/v1/projects",
+							"raw": "{{url}}/projects",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"{{url}}"
 							],
 							"path": [
 								"projects"
@@ -714,9 +714,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.todoist.com/rest/v1/tasks",
+							"raw": "{{url}}/tasks",
 							"host": [
-								"https://api.todoist.com/rest/v1"
+								"{{url}}"
 							],
 							"path": [
 								"tasks"
