@@ -7,20 +7,20 @@ class ProjectPage{
 
         this.nameProjectInput = Selector('#edit_project_modal_field_name')
         this.colorProjectInput = Selector('.color_dropdown_select__name')
-        this.favoriteSwitch = Selector('.reactist_switch--handle')
+        this.favoriteToggleSwitch = Selector('.reactist_switch--handle')
         this.addProjectButton = Selector('.ist_button.ist_button_red')
 
         this.colorProjectDropDownList = Selector('.color_dropdown_select__name').withExactText('Grape')
     }
 
-    async CreateNewProject(project){
+    async createNewProject(project){
         await CommonPage
             .clickOnAddNewProject()
         await t
             .typeText(this.nameProjectInput, project, {paste: true})
             .click(this.colorProjectInput)
             .click(this.colorProjectDropDownList)
-            .click(this.favoriteSwitch)
+            .click(this.favoriteToggleSwitch)
             .click(this.addProjectButton)
     }
 }

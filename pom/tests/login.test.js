@@ -6,7 +6,6 @@ import taskPage from '../pages/taskPage'
 
 fixture('Login feature test')
     .page `${URL.BASE_URL}`
-
     test.meta('type','smoke')('As a user I would like to log in to Todoist with a valid credentials', async t=> {
         await t
             .useRole(VALID_USER)

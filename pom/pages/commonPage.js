@@ -8,9 +8,9 @@ class CommonPage{
         this.upcomingOption = Selector('.item_content').withExactText('Upcoming')
         
         //Projects
-        this.expandProjectPanel = Selector('.expansion_panel__toggle').withExactText('Project')
-        this.adderIcon = Selector('.adder_icon').child(0)
-        this.lastProjectAdded = Selector('.text').nth(-1) 
+        this.expandProjectArrowIcon = Selector('.expansion_panel__toggle').withExactText('Project')
+        this.adderIconButton = Selector('.adder_icon').child(0)
+        this.lastProjectAddedText = Selector('.text').nth(-1) 
 
         //Favorites
         this.lastProjectFavorite = Selector('.FnFY2YlPR10DcnOkjvMMmA==')
@@ -33,7 +33,7 @@ class CommonPage{
 
     async clickOnAddNewProject(){
         await t
-            .click(this.adderIcon)
+            .click(this.adderIconButton)
     }
 
     async clickOnInboxSection(){

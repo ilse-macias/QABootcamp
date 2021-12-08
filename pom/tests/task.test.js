@@ -6,10 +6,14 @@ import taskPage from '../pages/taskPage'
 
 fixture('Task feature test')
     .page `${URL.BASE_URL}`
-
-    test.meta('type', 'smoke')('As a user I want to create a new task with Today as the due date', async t=> {
+    .beforeEach(async t => {
         await t
             .useRole(VALID_USER)
+    })
+
+    test.meta('type', 'smoke')('As a user I want to create a new task with Today as the due date', async t=> {
+        // await t
+        //     .useRole(VALID_USER)
         
         await taskPage
             .addNewTaskForToday(TASKS.TODAY.ADD_TASK_TODAY) 
@@ -20,9 +24,6 @@ fixture('Task feature test')
 
     //TO-DO: Create Assertion: today counter/text implemented.
     test.meta('type', 'smoke')('single task selecting tomorrow as the due date', async t=> {
-        await t
-            .useRole(VALID_USER)
-        
         await taskPage
             .addNewTaskForTomorrowSecondOption(TASKS.TODAY.ADD_TASK_TODAY)
            // .addNewTaskForTomorrow(TASKS.TOMORROW.ADD_TASK_TOMORROW) //Other option to add a task for 'Tomorrow'
