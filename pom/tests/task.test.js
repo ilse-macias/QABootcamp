@@ -12,14 +12,11 @@ fixture('Task feature test')
     })
 
     test.meta('type', 'smoke')('As a user I want to create a new task with Today as the due date', async t=> {
-        // await t
-        //     .useRole(VALID_USER)
-        
         await taskPage
             .addNewTaskForToday(TASKS.TODAY.ADD_TASK_TODAY) 
 
         await t
-            .expect(taskPage.taskCreatedTextbox.exists).ok({timeout:10000})
+            .expect(taskPage.taskCreatedTextbox.exists).ok()
     })
 
     //TO-DO: Create Assertion: today counter/text implemented.
