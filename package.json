@@ -9,10 +9,10 @@
   "scripts": {
     "test": "testcafe edge:headless,chrome:headless ./pom/tests",
     "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
-    "test-login" : "testcafe chrome:headless,firefox ./pom/tests/login.test.js",
-    "test-project" : "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
-    "test-task" : "testcafe chrome:headless,firefox ./pom/tests/task.test.js",
-    "test-delete" : "testcafe chrome:headless,firefox ./pom/tests/delete.test.js",
+    "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js",
+    "test-project": "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
+    "test-task": "testcafe chrome:headless,firefox ./pom/tests/task.test.js",
+    "test-delete": "testcafe chrome:headless,firefox ./pom/tests/delete.test.js",
     "api-testing": "newman run ./api/postman_collection2.json",
     "api-testing-url-environment": "newman run ./api/postman_collection.json",
     "lint": "eslint ./pom",
@@ -23,6 +23,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "eslint-plugin-testcafe": "^0.2.1",
+    "jenkins-cli": "^0.3.0",
     "newman": "^5.3.0",
     "testcafe": "^1.17.1",
     "testcafe-reporter-allure": "^1.0.5"
