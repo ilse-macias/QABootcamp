@@ -1,30 +1,13 @@
 name: Lint Code Base
-
-#
-# Documentation:
-# https://help.github.com/en/articles/workflow-syntax-for-github-actions
-#
-
-#############################
-# Start the job on all push #
-#############################
 on: 
   push
 
-###############
-# Set the Job #
-###############
 jobs:
   API-Testing:
     runs-on: ubuntu-latest
 
-    ##################
-    # Load all steps #
-    ##################
     steps:
-      ##########################
-      # Checkout the code base #
-      ##########################
+     
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -33,14 +16,20 @@ jobs:
         run: npm install -g newman
       - name: Run postman collection
         run: npm run api-testing 
-      - name: Install Reporters
-        run: npm install -g newman-reporter-htmlextra
-      - name: Run reporters to see the results
-        run: npm run api-testing -r htmlextra
 
-      ################################
-      # Run Linter against code base #
-      ################################
+  Eslint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install Eslint
+        run: npm i eslint
+      - name: Run eslint
+        run: npm
+
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
