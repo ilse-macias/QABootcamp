@@ -28,7 +28,7 @@ jobs:
       - name: Install Eslint
         run: npm i eslint
       - name: Run eslint
-        run: npm
+
 
       - name: Lint Code Base
         uses: github/super-linter@v4
