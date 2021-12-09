@@ -1,0 +1,81 @@
+[ {
+  "uid" : "812c8ed4c33dc19d",
+  "name" : "As a user I logged in with an invalid credentials",
+  "time" : {
+    "start" : 1639089340708,
+    "stop" : 1639089346055,
+    "duration" : 5347
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c4fba9eecef8453a",
+  "name" : "Delete every task created (if there is any)",
+  "time" : {
+    "start" : 1639089330919,
+    "stop" : 1639089348750,
+    "duration" : 17831
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0c5d308cb773ff6",
+  "name" : "As a user I would create a new project, choose any color you like and add it to favorites.",
+  "time" : {
+    "start" : 1639089368047,
+    "stop" : 1639089388663,
+    "duration" : 20616
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b974f1cf2cf862b0",
+  "name" : "As a user I want to create a new task with Today as the due date",
+  "time" : {
+    "start" : 1639089378878,
+    "stop" : 1639089389700,
+    "duration" : 10822
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "957a4c26704e3c85",
+  "name" : "As a user I click only on \"Log in\" button.",
+  "time" : {
+    "start" : 1639089347421,
+    "stop" : 1639089352125,
+    "duration" : 4704
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4093476af19f2668",
+  "name" : "As a user I logged in with an valid email and wrong password",
+  "time" : {
+    "start" : 1639089344427,
+    "stop" : 1639089349375,
+    "duration" : 4948
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a73e599f25505dc",
+  "name" : "As a user I would like to log in to Todoist with a valid credentials",
+  "time" : {
+    "start" : 1639089337575,
+    "stop" : 1639089344219,
+    "duration" : 6644
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5b5fbc69596c753e",
+  "name" : "single task selecting tomorrow as the due date",
+  "time" : {
+    "start" : 1639089404211,
+    "stop" : 1639089430389,
+    "duration" : 26178
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

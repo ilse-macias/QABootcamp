@@ -1,0 +1,109 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "As a user I click only on \"Log in\" button.",
+    "uid" : "957a4c26704e3c85",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089347421,
+      "stop" : 1639089352125,
+      "duration" : 4704
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "As a user I logged in with an valid email and wrong password",
+    "uid" : "4093476af19f2668",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089344427,
+      "stop" : 1639089349375,
+      "duration" : 4948
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "Delete every task created (if there is any)",
+    "uid" : "c4fba9eecef8453a",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089330919,
+      "stop" : 1639089348750,
+      "duration" : 17831
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "As a user I would create a new project, choose any color you like and add it to favorites.",
+    "uid" : "b0c5d308cb773ff6",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089368047,
+      "stop" : 1639089388663,
+      "duration" : 20616
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "As a user I want to create a new task with Today as the due date",
+    "uid" : "b974f1cf2cf862b0",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089378878,
+      "stop" : 1639089389700,
+      "duration" : 10822
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "As a user I would like to log in to Todoist with a valid credentials",
+    "uid" : "3a73e599f25505dc",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089337575,
+      "stop" : 1639089344219,
+      "duration" : 6644
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "single task selecting tomorrow as the due date",
+    "uid" : "5b5fbc69596c753e",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089404211,
+      "stop" : 1639089430389,
+      "duration" : 26178
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  }, {
+    "name" : "As a user I logged in with an invalid credentials",
+    "uid" : "812c8ed4c33dc19d",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639089340708,
+      "stop" : 1639089346055,
+      "duration" : 5347
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+  } ]
+}

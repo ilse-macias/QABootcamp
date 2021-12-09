@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1639089344427' stop='1639089344428'>
+    <name>Login feature test</name>
+    <title>Login feature test</title>
+    <test-cases>
+        <test-case start='1639089344427' status='passed' stop='1639089349375'>
+            <name>As a user I logged in with an valid email and wrong password</name>
+            <title>As a user I logged in with an valid email and wrong password</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='User Agent' value='Microsoft Edge 96.0.1054.43 / Windows 10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test has been passed.</message>
+                <stack-trace>no error</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

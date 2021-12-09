@@ -1,0 +1,54 @@
+{
+  "uid" : "957a4c26704e3c85",
+  "name" : "As a user I click only on \"Log in\" button.",
+  "fullName" : "Login feature test.As a user I click only on \"Log in\" button.",
+  "historyId" : "76ee7b4e4054ae1c1310fe53151dd4eb",
+  "time" : {
+    "start" : 1639089347421,
+    "stop" : 1639089352125,
+    "duration" : 4704
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "As a user I click only on \"Log in\" button."
+  }, {
+    "name" : "package",
+    "value" : "Login feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "957a4c26704e3c85.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

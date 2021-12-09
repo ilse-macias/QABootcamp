@@ -1,0 +1,54 @@
+{
+  "uid" : "c4fba9eecef8453a",
+  "name" : "Delete every task created (if there is any)",
+  "fullName" : "Delete task feature test.Delete every task created (if there is any)",
+  "historyId" : "d4cafe097905002c0a8f90ee16c058a5",
+  "time" : {
+    "start" : 1639089330919,
+    "stop" : 1639089348750,
+    "duration" : 17831
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Delete task feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Delete task feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "Delete every task created (if there is any)"
+  }, {
+    "name" : "package",
+    "value" : "Delete task feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c4fba9eecef8453a.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

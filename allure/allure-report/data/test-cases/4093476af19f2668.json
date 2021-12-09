@@ -1,0 +1,54 @@
+{
+  "uid" : "4093476af19f2668",
+  "name" : "As a user I logged in with an valid email and wrong password",
+  "fullName" : "Login feature test.As a user I logged in with an valid email and wrong password",
+  "historyId" : "8679635ea077f7335664545ad2fbaa0a",
+  "time" : {
+    "start" : 1639089344427,
+    "stop" : 1639089349375,
+    "duration" : 4948
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "As a user I logged in with an valid email and wrong password"
+  }, {
+    "name" : "package",
+    "value" : "Login feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4093476af19f2668.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

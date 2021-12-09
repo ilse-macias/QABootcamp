@@ -1,0 +1,54 @@
+{
+  "uid" : "5b5fbc69596c753e",
+  "name" : "single task selecting tomorrow as the due date",
+  "fullName" : "Task feature test.single task selecting tomorrow as the due date",
+  "historyId" : "659f8e34f41001a216caf5676acaac92",
+  "time" : {
+    "start" : 1639089404211,
+    "stop" : 1639089430389,
+    "duration" : 26178
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Task feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Task feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "single task selecting tomorrow as the due date"
+  }, {
+    "name" : "package",
+    "value" : "Task feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5b5fbc69596c753e.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

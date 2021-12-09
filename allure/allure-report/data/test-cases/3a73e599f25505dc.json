@@ -1,0 +1,54 @@
+{
+  "uid" : "3a73e599f25505dc",
+  "name" : "As a user I would like to log in to Todoist with a valid credentials",
+  "fullName" : "Login feature test.As a user I would like to log in to Todoist with a valid credentials",
+  "historyId" : "6e0afb26a7ffe069d06b9c5753f142ad",
+  "time" : {
+    "start" : 1639089337575,
+    "stop" : 1639089344219,
+    "duration" : 6644
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "As a user I would like to log in to Todoist with a valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Login feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3a73e599f25505dc.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}
