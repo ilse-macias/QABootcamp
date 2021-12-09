@@ -16,6 +16,6 @@ fixture('Project feature')
         await projectPage
             .createNewProject(PROJECT.ADD_PROJECT)
          await t
-             .expect(CommonPage.lastProjectAddedText.exists).ok() 
+             .expect(CommonPage.lastProjectAddedText.exists).ok({timeout:6000}) 
         })
     

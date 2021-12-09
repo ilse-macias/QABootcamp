@@ -3,7 +3,7 @@
         "browser": true,
         "es2021": true
     },
-    "plugins":["testfafe"],
+    "plugins":["testcafe"],
     "extends": ["eslint:recommended","plugin:testcafe/recommended"],
     "parserOptions": {
         "ecmaVersion": 13,

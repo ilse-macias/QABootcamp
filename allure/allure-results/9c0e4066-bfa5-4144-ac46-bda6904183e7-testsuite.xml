@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1639014384151' stop='1639014384152'>
+    <name>Project feature</name>
+    <title>Project feature</title>
+    <test-cases>
+        <test-case start='1639014384151' status='passed' stop='1639014403729'>
+            <name>As a user I would create a new project, choose any color you like and add it to favorites.</name>
+            <title>As a user I would create a new project, choose any color you like and add it to favorites.</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='User Agent' value='Microsoft Edge 96.0.1054.43 / Windows 10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test has been passed.</message>
+                <stack-trace>no error</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
