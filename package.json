@@ -16,6 +16,7 @@
     "test-allure": "testcafe chrome ./pom/tests --reporter allure",
     "visual-report-allure": "allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
     "api-testing": "newman run ./api/postman_collection.json -e ./api/postman_environment.json",
+    "tests-xunit": "testcafe chrome:headless  pom/tests/login.test.js --reporter xunit",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
