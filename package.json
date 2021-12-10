@@ -9,14 +9,14 @@
   "scripts": {
     "test": "testcafe edge:headless,chrome:headless ./pom/tests",
     "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
-    "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js --reporter xunit",
+    "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js",
     "test-project": "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
     "test-task": "testcafe chrome:headless,firefox ./pom/tests/task.test.js",
     "test-delete": "testcafe chrome:headless,firefox ./pom/tests/delete.test.js",
     "test-allure": "testcafe chrome ./pom/tests --reporter allure",
     "visual-report-allure": "allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
     "api-testing": "newman run ./api/postman_collection.json -e ./api/postman_environment.json",
-    "tests-xunit": "testcafe chrome:headless  pom/tests/login.test.js --reporter xunit",
+    "test-xunit": "testcafe chrome:headless pom/tests/login.test.js --reporter  xunit",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
