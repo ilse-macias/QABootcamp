@@ -7,10 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "testcafe edge:headless,chrome:headless ./pom/tests",
-    "test-reporter-xunit": "testcafe chrome ./pom/tests --reporter xunit",
+    "test": "testcafe edge:headless,chrome:headless ./pom/tests", 
     "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
-    "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js",
+    "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js --reporter xunit",
     "test-project": "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
     "test-task": "testcafe chrome:headless,firefox ./pom/tests/task.test.js",
     "test-delete": "testcafe chrome:headless,firefox ./pom/tests/delete.test.js",
