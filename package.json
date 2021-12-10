@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "testcafe edge:headless,chrome:headless ./pom/tests",
-    "test-reporter-xunit": "testcafe edge:headless,chrome:headless ./pom/tests -r xunit:res.xml",
+    "test-reporter-xunit": "testcafe chrome ./pom/tests --reporter xunit",
     "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
     "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js",
     "test-project": "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
