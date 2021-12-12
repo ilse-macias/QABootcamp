@@ -10,7 +10,7 @@ fixture('Delete task feature test')
     })
     
     //TODO: Create assertion: Verify if the counter is decreasing from Inbox task.
-    test.meta('type','smoke')('Delete every task created (if there is any)', async t=> {
+    test('Delete every task created (if there is any)', async t=> {
         await CommonPage
             .clickOnInboxSection()
         await t.wait(5000) //This will remove until the assertion is created.

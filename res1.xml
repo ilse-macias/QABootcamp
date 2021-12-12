@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Microsoft Edge 96.0.1054.53 / Windows 10" tests="6" failures="0" skipped="0" errors="0" time="61.704" timestamp="Sun, 12 Dec 2021 04:20:41 GMT" >
+  <testcase classname="Login feature test" name="As a user I logged in with an invalid credentials" time="3.515">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user I logged in with an valid email and wrong password" time="2.164">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user I click only on &quot;Log in&quot; button." time="1.646">
+  </testcase>
+  <testcase classname="Project feature" name="As a user I would create a new project, choose any color you like and add it to favorites." time="21.669">
+  </testcase>
+  <testcase classname="Task feature test" name="As a user I want to create a new task with Today as the due date" time="9.802">
+  </testcase>
+  <testcase classname="Task feature test" name="single task selecting tomorrow as the due date" time="22.848">
+  </testcase>
+</testsuite>

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite name="TestCafe Tests: Chrome 96.0.4664.93 / Windows 10" tests="2" failures="0" skipped="0" errors="0" time="38.412" timestamp="Sun, 12 Dec 2021 04:01:32 GMT" >
-  <testcase classname="Task feature test" name="As a user I want to create a new task with Today as the due date" time="15.863">
+<testsuite name="TestCafe Tests: Chrome 96.0.4664.93 / Windows 10" tests="8" failures="0" skipped="0" errors="0" time="77.572" timestamp="Sun, 12 Dec 2021 04:24:24 GMT" >
+  <testcase classname="Delete task feature test" name="Delete every task created (if there is any)" time="17.101">
   </testcase>
-  <testcase classname="Task feature test" name="single task selecting tomorrow as the due date" time="22.527">
+  <testcase classname="Login feature test" name="As a user I would like to log in to Todoist with a valid credentials" time="4.561">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user I logged in with an invalid credentials" time="2.075">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user I logged in with an valid email and wrong password" time="2.502">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user I click only on &quot;Log in&quot; button." time="1.734">
+  </testcase>
+  <testcase classname="Project feature" name="As a user I would create a new project, choose any color you like and add it to favorites." time="16.21">
+  </testcase>
+  <testcase classname="Task feature test" name="As a user I want to create a new task with Today as the due date" time="10.219">
+  </testcase>
+  <testcase classname="Task feature test" name="single task selecting tomorrow as the due date" time="23.09">
   </testcase>
 </testsuite>

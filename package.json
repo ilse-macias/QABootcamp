@@ -17,7 +17,8 @@
     "visual-report-allure": "allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
     "api-testing": "newman run ./api/postman_collection.json -e ./api/postman_environment.json",
     "test-xunit": "testcafe chrome:headless pom/tests/login.test.js --reporter xunit",
-    "test-xunit-1": "testcafe chrome:headless pom/tests/task.test.js -r xunit:res.xml",
+    "test-xunit-all": "testcafe chrome:headless pom/tests -r xunit:res.xml",
+    "test-xunit-smoke": "testcafe edge:headless pom/tests --test-meta type=smoke -r xunit:res1.xml",
     "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
