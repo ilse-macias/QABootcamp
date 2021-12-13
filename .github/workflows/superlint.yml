@@ -16,7 +16,19 @@ jobs:
         run: npm install -g newman
       - name: Run postman collection
         run: npm run api-testing 
+        
+      - name: Install Allure
+        run: npm install testcafe-reporter-allure
+      - name: Path Allure
+        run: npm run test-allure
+      - name: Visual Report Allure
+        run: npm run visual-report-allure
 
+      - name: Install Eslint
+        run: npm install eslint
+      - name: Init Eslint
+        run: npx eslint --init
+    
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
