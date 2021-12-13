@@ -27,18 +27,6 @@ jobs:
         run: npm install -g newman
       - name: Run postman collection
         run: npm run api-testing 
-  
-  Allure:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - name: Install Allure
-        run: npm install testcafe-reporter-allure
-      - name: Path Allure
-        run: npm run visual-report-allure
 
 
       - name: Lint Code Base
