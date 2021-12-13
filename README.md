@@ -19,6 +19,8 @@ Test cases created:
 * <a href="https://testcafe.io/">TestCafé</a>
 * <a href="https://www.npmjs.com/package/dotenv">dotenv</a>
 * <a href="https://www.npmjs.com/search?q=eslint">eslint</a>
+* <a href="https://www.npmjs.com/package/testcafe-reporter-allure-extended">Allure</a>
+* <a href="https://www.npmjs.com/package/testcafe-reporter-xunit">Reporter xunit</a>
 
 <b>Project Setup</b>
 1. Open Visual Studio Code.
@@ -26,7 +28,9 @@ Test cases created:
 3. On the repository search, click on "Clone from GitHub" option; you must authorized if you are not able to see all your repositories.
 4. Click search this repository.
 
-On .env file, you will find the url, credentials of the project.
+<b> Credentials </b> <br>
+Email: bootcamp@qa.team <br>
+Password: Bootcamp2021
 
 
 # Deliverable 2 - API testing
