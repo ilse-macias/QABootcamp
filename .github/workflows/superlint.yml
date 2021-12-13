@@ -27,8 +27,6 @@ jobs:
         run: npm install -g newman
       - name: Run postman collection
         run: npm run api-testing  
-      - name: Reporter Allure
-        run: npm run test-allure
       - name: Visual Reporter Allure
         run: npm run visual-report-allure
         
