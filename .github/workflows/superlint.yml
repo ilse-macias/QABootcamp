@@ -26,9 +26,7 @@ jobs:
       - name: Install Newman
         run: npm install -g newman
       - name: Run postman collection
-        run: npm run api-testing  
-      - name: Visual Reporter Allure
-        run: npm run visual-report-allure
+        run: npm run api-testing 
         
 
       - name: Lint Code Base
