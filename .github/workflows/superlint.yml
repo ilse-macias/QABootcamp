@@ -5,9 +5,7 @@ on:
 jobs:
   API-Testing:
     runs-on: ubuntu-latest
-
     steps:
-     
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -16,7 +14,26 @@ jobs:
         run: npm install -g newman
       - name: Run postman collection
         run: npm run api-testing 
+  
+  Eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install Eslint
+        run: npm install eslint
+      - name: Init Eslint
+        run: npx eslint --init
         
+  Allure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
       - name: Install Allure
         run: npm install testcafe-reporter-allure
       - name: Path Allure
@@ -24,11 +41,7 @@ jobs:
       - name: Visual Report Allure
         run: npm run visual-report-allure
 
-      - name: Install Eslint
-        run: npm install eslint
-      - name: Init Eslint
-        run: npx eslint --init
-    
+
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
