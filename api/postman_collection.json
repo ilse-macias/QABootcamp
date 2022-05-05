@@ -15,7 +15,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//Status\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
@@ -307,8 +306,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"// pm.environment.set(\"idProject\", \"2279609244\");\r",
-									"// pm.environment.unset(\"2279609244\");"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -784,12 +782,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"//project name into the environment, and after execution it should clear that variable. save the Project’s id into an environment variable to\r",
-									"//use it later on other requests. This is applicable to Create a new task too.\r",
-									"\r",
-									"// const jsonData = pm.response.json()\r",
-									"// pm.globals.set(\"idTask\", jsonData.id);\r",
-									"// pm.environment.unset(\"idTask\");"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -907,8 +900,7 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
-									"//pm.environment.unset(\"idTask\");"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -917,9 +909,6 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"// pm.environment.set(\"idTask\", jsonData.id);\r",
-									"// pm.environment.unset(\"idTask\");\r",
-									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -1017,10 +1006,7 @@
 								"exec": [
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
-									"});\r",
-									"\r",
-									"\r",
-									"//pm.environment.unset(\"idTask\");"
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -1101,9 +1087,7 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
-									"\r",
-									"//pm.environment.unset(\"idTask\");"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1203,10 +1187,7 @@
 								"exec": [
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
-									"});\r",
-									"\r",
-									"\r",
-									"//pm.environment.unset(\"idTask\");"
+									"});"
 								],
 								"type": "text/javascript"
 							}
