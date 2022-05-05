@@ -1,4 +1,5 @@
 # QABootcamp
+# Deliverable 1 - Front-End automation
 The purpose of this repository is to complete the activities from the Capstone documentation following the best practices.
 
 Test cases created:
@@ -30,3 +31,32 @@ Test cases created:
 <b> Credentials </b> <br>
 Email: bootcamp@qa.team <br>
 Password: Bootcamp2021
+
+
+# Deliverable 2 - API testing
+In this deliverable is about "API testing" using Postman as a tool and export it on the front-end project.
+
+<b> Technologies and Dependencies </b>
+* <a href="https://www.postman.com/">Postman</a>
+* <a href="https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/">Newman </a>
+
+<b> How to export the enviroment and collections from postman </b>
+* Collections
+1. Click on "Collections" icon at left sidebar.
+2. Click on the name of the collection that you're working. E.g. _Todoist_
+3. Click on the "ellipsis" button to see more actions, then click on "Export" option.
+4. A modal will be open, click on "Export" button.
+5. Save the json file.
+
+* Environment
+1. Click on "Enviroment" icon at left sidebar.
+2. Click on the environments that you're working. E.g. _Todoist_
+3. On the right side panel, click on the "ellipsis" button to see more actions, then click on "Export" option.
+4. Save the json file.
+
+<b> How to implement on the front-end project </b>
+  
+* Once exported the collections and environments, create a folder named "api" from root from your front-end project and those JSON must be on that folder.
+* To execute them, install newman and on the **package.json** add the path where the api-test is.
+
+You can find Todoist workspace <a href="https://www.postman.com/ilse-macias/workspace/qa-bootcamp/collection/17467668-0db54632-b1bb-49bc-a843-45a34617724d">here</a>

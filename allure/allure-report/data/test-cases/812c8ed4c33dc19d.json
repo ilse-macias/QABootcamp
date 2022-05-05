@@ -1,0 +1,54 @@
+{
+  "uid" : "812c8ed4c33dc19d",
+  "name" : "As a user I logged in with an invalid credentials",
+  "fullName" : "Login feature test.As a user I logged in with an invalid credentials",
+  "historyId" : "e6628689ad37c6b2ca099bacc08b6113",
+  "time" : {
+    "start" : 1639089340708,
+    "stop" : 1639089346055,
+    "duration" : 5347
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Login feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "As a user I logged in with an invalid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Login feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "812c8ed4c33dc19d.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

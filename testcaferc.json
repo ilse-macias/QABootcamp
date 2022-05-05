@@ -1,0 +1,6 @@
+{
+    "skipJsErrors": true,
+    "assertionTimeout": 10000,
+    "runExecutionTimeout": 10000,
+    "testExecutionTimeout": 10000
+}

@@ -1,0 +1,125 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Delete task feature test",
+    "children" : [ {
+      "name" : "Delete every task created (if there is any)",
+      "uid" : "c4fba9eecef8453a",
+      "parentUid" : "493db6bce24b341d071db8f74bd96251",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089330919,
+        "stop" : 1639089348750,
+        "duration" : 17831
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    } ],
+    "uid" : "493db6bce24b341d071db8f74bd96251"
+  }, {
+    "name" : "Login feature test",
+    "children" : [ {
+      "name" : "As a user I would like to log in to Todoist with a valid credentials",
+      "uid" : "3a73e599f25505dc",
+      "parentUid" : "c1bc04722f075a9c8766ce1eecd1f677",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089337575,
+        "stop" : 1639089344219,
+        "duration" : 6644
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    }, {
+      "name" : "As a user I logged in with an invalid credentials",
+      "uid" : "812c8ed4c33dc19d",
+      "parentUid" : "c1bc04722f075a9c8766ce1eecd1f677",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089340708,
+        "stop" : 1639089346055,
+        "duration" : 5347
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    }, {
+      "name" : "As a user I logged in with an valid email and wrong password",
+      "uid" : "4093476af19f2668",
+      "parentUid" : "c1bc04722f075a9c8766ce1eecd1f677",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089344427,
+        "stop" : 1639089349375,
+        "duration" : 4948
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    }, {
+      "name" : "As a user I click only on \"Log in\" button.",
+      "uid" : "957a4c26704e3c85",
+      "parentUid" : "c1bc04722f075a9c8766ce1eecd1f677",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089347421,
+        "stop" : 1639089352125,
+        "duration" : 4704
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    } ],
+    "uid" : "c1bc04722f075a9c8766ce1eecd1f677"
+  }, {
+    "name" : "Project feature",
+    "children" : [ {
+      "name" : "As a user I would create a new project, choose any color you like and add it to favorites.",
+      "uid" : "b0c5d308cb773ff6",
+      "parentUid" : "8ae9b7a24df2295eb1442ecd0eb90b13",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089368047,
+        "stop" : 1639089388663,
+        "duration" : 20616
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    } ],
+    "uid" : "8ae9b7a24df2295eb1442ecd0eb90b13"
+  }, {
+    "name" : "Task feature test",
+    "children" : [ {
+      "name" : "As a user I want to create a new task with Today as the due date",
+      "uid" : "b974f1cf2cf862b0",
+      "parentUid" : "cc477a514ff3aeae8e592532b51065cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089378878,
+        "stop" : 1639089389700,
+        "duration" : 10822
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    }, {
+      "name" : "single task selecting tomorrow as the due date",
+      "uid" : "5b5fbc69596c753e",
+      "parentUid" : "cc477a514ff3aeae8e592532b51065cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639089404211,
+        "stop" : 1639089430389,
+        "duration" : 26178
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+    } ],
+    "uid" : "cc477a514ff3aeae8e592532b51065cd"
+  } ]
+}

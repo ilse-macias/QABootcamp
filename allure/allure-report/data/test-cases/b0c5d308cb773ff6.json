@@ -1,0 +1,54 @@
+{
+  "uid" : "b0c5d308cb773ff6",
+  "name" : "As a user I would create a new project, choose any color you like and add it to favorites.",
+  "fullName" : "Project feature.As a user I would create a new project, choose any color you like and add it to favorites.",
+  "historyId" : "c74d8030f910133ceb23a4e9d4b627de",
+  "time" : {
+    "start" : 1639089368047,
+    "stop" : 1639089388663,
+    "duration" : 20616
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Project feature"
+  }, {
+    "name" : "testClass",
+    "value" : "Project feature"
+  }, {
+    "name" : "testMethod",
+    "value" : "As a user I would create a new project, choose any color you like and add it to favorites."
+  }, {
+    "name" : "package",
+    "value" : "Project feature"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b0c5d308cb773ff6.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

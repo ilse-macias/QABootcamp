@@ -1,0 +1,37 @@
+name: Lint Code Base
+on: 
+  push
+
+jobs:
+
+  Eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install Eslint
+        run: npm install eslint
+      - name: Init Eslint
+        run: npx eslint --init
+        
+  API-Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install Newman
+        run: npm install -g newman
+      - name: Run postman collection
+        run: npm run api-testing 
+        
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

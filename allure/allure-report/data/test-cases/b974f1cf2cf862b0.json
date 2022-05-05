@@ -1,0 +1,54 @@
+{
+  "uid" : "b974f1cf2cf862b0",
+  "name" : "As a user I want to create a new task with Today as the due date",
+  "fullName" : "Task feature test.As a user I want to create a new task with Today as the due date",
+  "historyId" : "da03fceedba28b12a95c481f660c30ab",
+  "time" : {
+    "start" : 1639089378878,
+    "stop" : 1639089389700,
+    "duration" : 10822
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Task feature test"
+  }, {
+    "name" : "testClass",
+    "value" : "Task feature test"
+  }, {
+    "name" : "testMethod",
+    "value" : "As a user I want to create a new task with Today as the due date"
+  }, {
+    "name" : "package",
+    "value" : "Task feature test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Microsoft Edge 96.0.1054.43 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b974f1cf2cf862b0.json",
+  "parameterValues" : [ "Microsoft Edge 96.0.1054.43 / Windows 10" ]
+}

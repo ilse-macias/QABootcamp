@@ -7,12 +7,34 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "testcafe chrome ./pom/tests"
+    "test": "testcafe edge:headless,chrome:headless ./pom/tests",
+    "smoke-test": "testcafe edge:headless,chrome ./pom/tests --test-meta type=smoke",
+    "test-login": "testcafe chrome:headless,firefox ./pom/tests/login.test.js",
+    "test-project": "testcafe chrome:headless,firefox ./pom/tests/project.test.js",
+    "test-task": "testcafe chrome:headless,firefox ./pom/tests/task.test.js",
+    "test-delete": "testcafe chrome:headless,firefox ./pom/tests/delete.test.js",
+    "test-allure": "testcafe chrome ./pom/tests --reporter allure",
+    "visual-report-allure": "allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
+    "api-testing": "newman run ./api/postman_collection.json -e ./api/postman_environment.json",
+    "test-xunit": "testcafe chrome:headless pom/tests/login.test.js --reporter xunit",
+    "test-xunit-all": "testcafe chrome:headless pom/tests -r xunit:res.xml",
+    "test-xunit-smoke": "testcafe edge:headless pom/tests --test-meta type=smoke -r xunit:res1.xml",
+    "lint": "eslint ./pom"
   },
   "author": "Ilse Macías",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "testcafe": "^1.17.1"
+    "eslint-plugin-testcafe": "^0.2.1",
+    "jenkins-cli": "^0.3.0",
+    "newman": "^5.3.0",
+    "testcafe": "^1.17.1",
+    "testcafe-reporter-allure": "^1.0.5",
+    "testcafe-reporter-jenkins": "^1.0.1",
+    "testcafe-reporter-xunit": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai-postman": "^2.0.1",
+    "eslint": "^8.4.1"
   }
 }

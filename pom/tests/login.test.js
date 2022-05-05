@@ -1,13 +1,34 @@
-import { Selector, test} from 'testcafe'
 import {URL, CREDENTIALS} from '../data/constants'
-import loginPage from '../pages/login-page'
+import { VALID_USER } from '../data/roles'
+import loginPage from '../pages/loginPage'
+import taskPage from '../pages/taskPage'
+
 
 fixture('Login feature test')
     .page `${URL.BASE_URL}`
-
     test('As a user I would like to log in to Todoist with a valid credentials', async t=> {
         await t
-            .typeText(loginPage.emailInput, CREDENTIALS.STANDARDS_USER.EMAIL)
-            .typeText(loginPage.passwordInput, CREDENTIALS.STANDARDS_USER.PASSWORD) 
-            .click(loginPage.loginButton)
+            .useRole(VALID_USER)
+            .expect(taskPage.todayTitle.exists).ok() //{timeout:6000} sometimes is not passing the test.
+    })
+    
+    test.meta('type', 'smoke')('As a user I logged in with an invalid credentials', async t=> {
+        await loginPage
+            .submitLoginForm(CREDENTIALS.INVALID_USER.EMAIL, CREDENTIALS.INVALID_USER.PASSWORD)
+        await t
+            .expect(loginPage.errorMessageInvalidCredentials.exists).ok()  
+    })
+
+    test.meta('type', 'smoke')('As a user I logged in with an valid email and wrong password', async t=> {
+        await loginPage
+            .submitLoginForm(CREDENTIALS.VALID_USER.EMAIL, CREDENTIALS.INVALID_USER.PASSWORD)
+        await t
+            .expect(loginPage.errorMessageInvalidCredentials.exists).ok()  
+    })
+
+    test.meta('type', 'smoke')('As a user I click only on "Log in" button.', async t=> {
+        await loginPage
+            .clickOnlyOnLoginButton()
+        await t
+            .expect(loginPage.errorMessageInvalidCredentials.exists).ok()  
     })
